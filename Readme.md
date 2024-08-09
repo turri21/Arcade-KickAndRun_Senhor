@@ -1,3 +1,7 @@
+-=(KickAndRun_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound
+
 # Taito Kick And Run
 
 This is a port of the classic Taito arcade game Kick And Run for the MiSTer FPGA platform by Pierco. The core is currently not compatible with Kiki Kaikai due to the lack of an MCU dump. However, I am actively working on it and I started to recreate a custom ROM in assembly. I hope to make the core compatible soon.
