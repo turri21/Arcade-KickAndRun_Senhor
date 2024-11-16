@@ -73,8 +73,8 @@ module sys_top
 	//output  [5:0] VGA_G,
 	//output  [5:0] VGA_B,
 	//inout         VGA_HS,
-	//output		  VGA_VS,
-	//input         VGA_EN,  // active low
+	//output        VGA_VS,
+	input         VGA_EN,  // active low
 
 	/////////// AUDIO //////////
 	//output		  AUDIO_L,
@@ -87,12 +87,12 @@ module sys_top
 	//output        SDIO_CLK,
 
 	//////////// I/O ///////////
-	//output        LED_USER,
-	//output        LED_HDD,
-	//output        LED_POWER,
-	//input         BTN_USER,
-	//input         BTN_OSD,
-	//input         BTN_RESET,
+	output        LED_USER,
+	output        LED_HDD,
+	output        LED_POWER,
+	input         BTN_USER,
+	input         BTN_OSD,
+	input         BTN_RESET,
 `endif
 
 	////////// I/O ALT /////////
@@ -126,23 +126,23 @@ module sys_top
 
 //////////////////////// Senhor: Initializations ////////////////////////
 
-wire [5:0] VGA_R;
-wire [5:0] VGA_G;
-wire [5:0] VGA_B;
-wire VGA_HS;
+//wire [5:0] VGA_R;
+//wire [5:0] VGA_G;
+//wire [5:0] VGA_B;
+wire VGA_HS = 1'b1;
 wire VGA_VS = 1'b1;
-wire VGA_EN = 1'b1;
+//wire VGA_EN = 1'b1
 
-assign VGA_R = 6'b000000;
-assign VGA_G = 6'b000000;
-assign VGA_B = 6'b000000;
+//assign VGA_R = 6'b000000;
+//assign VGA_G = 6'b000000;
+//assign VGA_B = 6'b000000;
 
 wire [3:0] SDIO_DAT;
 wire SDIO_CMD = 1'b1;
 wire [6:0] USER_IO;
 wire SD_SPI_MISO = 1'b1;
 
-wire BTN_RESET = 1'b1, BTN_OSD = 1'b1, BTN_USER = 1'b1;
+//wire BTN_RESET = 1'b1, BTN_OSD = 1'b1, BTN_USER = 1'b1;
 
 /////////////////////////////////////////////////////////////////////////
 
